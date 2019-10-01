@@ -1,0 +1,16 @@
+name: bloc_event
+description: Make the Bloc Events easier to structure
+version: 1.0.0
+author: Martin Förster - Brickmakers
+homepage: https://github.com/Ownii
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  bloc: ^0.15.0
+
+dev_dependencies:
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
