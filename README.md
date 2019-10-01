@@ -41,7 +41,7 @@ class DoSomethingEvent extends MyEvent<DoSomethingEvent> {
 
 By extending EventBloc in your Bloc you don't have to implement mapEventToState:
 ```dart
-class MyBloc extends BlocEvent<MyEvent, MyState> {
+class MyBloc extends EventBloc<MyEvent, MyState> {
   
   @Override
   MyState get initialState => MyState();
