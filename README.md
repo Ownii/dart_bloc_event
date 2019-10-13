@@ -4,19 +4,6 @@ Make the Bloc Events easier to structure
 
 ## Getting Started
 
-### Adding dependency
-
-**Github**
-```yml
-dependencies:
-  bloc_event:
-    git:
-      url: git://github.com/Ownii/dart_bloc_event.git
-      ref: v1.0
-```
-
-**pub.dev** dependency cooming soon...
-
 ### Basic Usage
 
 Create your events base class like followed:
