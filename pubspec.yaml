@@ -1,6 +1,6 @@
 name: bloc_event
 description: Make the Bloc Events easier to structure
-version: 1.0.0
+version: 1.0.1
 author: Martin Förster - Brickmakers <martin.foerster@brickmakers.de>
 homepage: https://github.com/Ownii/dart_bloc_event
 
