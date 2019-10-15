@@ -15,7 +15,7 @@ class CounterState {
   }
 }
 
-abstract class CounterEvent<E> extends Event<CounterBloc, CounterState, E> {}
+abstract class CounterEvent<E> extends Event<CounterBloc, CounterState> {}
 
 class CounterBloc extends EventBloc<CounterEvent, CounterState> {
 
@@ -30,8 +30,8 @@ class CounterIncrement extends CounterEvent<CounterIncrement> {
   CounterIncrement(this.value);
 
   @override
-  Stream<CounterState> onTriggered(bloc, state, event) async* {
-    yield state.copyWith(counter: state.counter+event.value);
+  Stream<CounterState> onTriggered(bloc, state,) async* {
+    yield state.copyWith(counter: state.counter+value);
   }
 }
 

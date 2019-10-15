@@ -4,24 +4,26 @@ Make the Bloc Events easier to structure
 
 ## Getting Started
 
+To use this plugin, add `bloc_event` as a [dependency in your pubspec.yaml file](https://flutter.io/platform-plugins/).
+
 ### Basic Usage
 
 Create your events base class like followed:
 ```dart
-abstract class MyEvent<E> extends Event<MyBloc, MyState, E> {}
+abstract class MyEvent extends Event<MyBloc, MyState> {}
 ```
 
 Your actual Event should look like:
 ```dart
-class DoSomethingEvent extends MyEvent<DoSomethingEvent> {
+class DoSomethingEvent extends MyEvent {
   final String myData;
   
   DoSomethingEvent(this.myData);
   
   @Override
-  Stream<MyState> onTriggered(MyBloc bloc, MyState currentState, DoSomethingEvent event) async* {
+  Stream<MyState> onTriggered(MyBloc bloc, MyState state) async* {
     // Do your event stuff here
-    yield currentState.copyWith();
+    yield state.copyWith(data: myData);
   }
 }
 ```
@@ -36,11 +38,11 @@ class MyBloc extends EventBloc<MyEvent, MyState> {
 }
 ```
 
-Thats it!!
+That's it!!
 
 ## Testing
-You are now able to test your events seperated easily without even using the bloc
+You are now able to test your events separated easily without even using the bloc
 
-example cooming soon
+example coming soon
 ```dart
 ```

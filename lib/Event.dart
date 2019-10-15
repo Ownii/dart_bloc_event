@@ -1,3 +1,3 @@
-abstract class Event<B, S, E> {
-  Stream<S> onTriggered(B bloc, S state, E event);
+abstract class Event<B, S> {
+  Stream<S> onTriggered(B bloc, S state);
 }
