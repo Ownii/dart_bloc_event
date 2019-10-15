@@ -1,6 +1,6 @@
 name: bloc_event
 description: With this package you can define the logic that an bloc event executes inside the events class.
-version: 1.0.1
+version: 1.0.2
 author: Martin Förster - Brickmakers <martin.foerster@brickmakers.de>
 homepage: https://github.com/Ownii/dart_bloc_event
 
