@@ -8,3 +8,6 @@ environment:
 dependencies:
   bloc_event:
     path: ../
+
+dev_dependencies:
+  test: ^1.9.2

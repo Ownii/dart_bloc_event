@@ -1,37 +1,23 @@
 
 import 'package:bloc_event/bloc_event.dart';
 
-class CounterState {
-  final int counter;
+abstract class CounterEvent<E> extends Event<CounterBloc, int> {}
 
-  CounterState({this.counter});
-
-  CounterState copyWith({
-    int counter,
-  }) {
-    return CounterState(
-      counter: counter ?? this.counter,
-    );
-  }
-}
-
-abstract class CounterEvent<E> extends Event<CounterBloc, CounterState> {}
-
-class CounterBloc extends EventBloc<CounterEvent, CounterState> {
+class CounterBloc extends EventBloc<CounterEvent, int> {
 
   @override
-  CounterState get initialState => CounterState(counter: 0);
+  int get initialState => 0;
 
 }
 
-class CounterIncrement extends CounterEvent<CounterIncrement> {
+class CounterIncrement extends CounterEvent {
   final int value;
 
   CounterIncrement(this.value);
 
   @override
-  Stream<CounterState> onTriggered(bloc, state,) async* {
-    yield state.copyWith(counter: state.counter+value);
+  Stream<int> onTriggered(bloc, state) async* {
+    yield state+value;
   }
 }
 

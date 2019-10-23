@@ -1,3 +1,6 @@
+## 1.0.4 - 22.10.2019
+* bloc library updated to 1.0.0
+* test documentation
 ## 1.0.3 - 16.10.2019
 * Removed generic event parameter from onTriggered function, its not needed
 

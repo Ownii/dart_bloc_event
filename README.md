@@ -41,8 +41,12 @@ class MyBloc extends EventBloc<MyEvent, MyState> {
 That's it!!
 
 ## Testing
-You are now able to test your events separated easily without even using the bloc
+You are now able to test your events separated easily without even using the bloc.
 
-example coming soon
 ```dart
+test('sample test', () {
+    var myEventToTest = MyEvent(myData);
+    var result = myEventToTest.onTriggered(myMockedBloc, myCurrentState);
+    expectLater(result, emits(myNewState));
+});
 ```
