@@ -1,13 +1,13 @@
 name: bloc_event
 description: With this package you can define the logic that an bloc event executes inside the events class.
-version: 1.0.5
+version: 1.0.6
 homepage: https://github.com/Ownii/dart_bloc_event
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
-  bloc: ^2.0.0
+  bloc: ^3.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
